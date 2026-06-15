@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+
+metadata:
+  name: register-app
+  namespace: register-app
+
+spec:
+  selector:
+    app: register-app
+
+  ports:
+  - port: 80
+    targetPort: 3000
+
+  type: NodePort
